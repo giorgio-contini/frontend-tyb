@@ -1,18 +1,9 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
-
 name: Deploy web app to Azure Static Web Apps
 
 env:
-  APP_LOCATION: "/" # location of your client code
-  API_LOCATION: "api" # location of your api source code - optional
-  OUTPUT_LOCATION: "build" # location of client code build output
+  APP_LOCATION: "/"       # Posizione del codice client
+  API_LOCATION: "api"     # Posizione del codice sorgente API - opzionale
+  OUTPUT_LOCATION: "build" # Posizione dell'output del build del codice client
 
 on:
   push:
@@ -22,11 +13,6 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - master
-
-permissions:
-  issues: write
-  contents: read
-  pull-requests: write
 
 jobs:
   build_and_deploy:
@@ -53,7 +39,7 @@ jobs:
     name: Close Pull Request
     steps:
       - name: Close Pull Request
-        uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
+        uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           action: "close"
