@@ -11,6 +11,9 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'], // Estensioni dei file da gestire da webpack
+    alias: {
+        'pdfjs-dist': path.resolve(__dirname, 'node_modules/pdfjs-dist'),
+    },
   },
   module: {
     rules: [
@@ -23,6 +26,10 @@ const config: Configuration = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
        },
+       {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+    },
     ],
   },
   plugins: [
