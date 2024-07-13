@@ -4,23 +4,13 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - master
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    name: Build and Deploy Job
+  build:
+    runs-on: windows-latest
+    name: Build Job
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          repository: 'giorgio-contini/frontend-tyb'
-          path: 'frontend-tyb'  # Assicura che il percorso corrisponda alla struttura del tuo repository
-          submodules: true
-          fetch-depth: 0  # Ensure all history is fetched to enable accurate analysis and build.
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js version
         uses: actions/setup-node@v3
@@ -36,12 +26,15 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: npm install, build, and test
-        working-directory: frontend-tyb
         run: |
           npm install
           npm run build --if-present
           npm run test --if-present
 
+  deploy_job:
+    runs-on: windows-latest
+    needs: build_job
+    steps:
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
