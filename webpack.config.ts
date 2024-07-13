@@ -19,6 +19,10 @@ const config: Configuration = {
         exclude: /node_modules/,
         use: 'ts-loader', // Carica i file TypeScript utilizzando ts-loader
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+       },
     ],
   },
   plugins: [
