@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.237f7ec5.css",
+    "main.js": "/static/js/main.8eee5466.js",
+    "static/js/453.59b64609.chunk.js": "/static/js/453.59b64609.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/titillium-web-latin-300-normal.woff": "/static/media/titillium-web-latin-300-normal.f9bac90d76f78d31c4ba.woff",
+    "static/media/titillium-web-latin-400-normal.woff": "/static/media/titillium-web-latin-400-normal.92c680a5dde8f96ce9bb.woff",
+    "static/media/titillium-web-latin-200-normal.woff": "/static/media/titillium-web-latin-200-normal.b10e235b55f099f3095e.woff",
+    "static/media/titillium-web-latin-600-normal.woff": "/static/media/titillium-web-latin-600-normal.adf539dcd586fc83166d.woff",
+    "static/media/titillium-web-latin-700-normal.woff": "/static/media/titillium-web-latin-700-normal.b48fcdcec8064f2afb63.woff",
+    "static/media/titillium-web-latin-900-normal.woff": "/static/media/titillium-web-latin-900-normal.3fdf1f57dba63b77ea2a.woff",
+    "static/media/titillium-web-latin-300-normal.woff2": "/static/media/titillium-web-latin-300-normal.b3b8d8db58322ee10c06.woff2",
+    "static/media/titillium-web-latin-400-normal.woff2": "/static/media/titillium-web-latin-400-normal.55b29b135a9838d9e0f7.woff2",
+    "static/media/titillium-web-latin-200-normal.woff2": "/static/media/titillium-web-latin-200-normal.86f32969ad566909b547.woff2",
+    "static/media/titillium-web-latin-600-normal.woff2": "/static/media/titillium-web-latin-600-normal.37816aa7534e645dfad1.woff2",
+    "static/media/titillium-web-latin-700-normal.woff2": "/static/media/titillium-web-latin-700-normal.e5c38d503943cd52fd6f.woff2",
+    "static/media/titillium-web-latin-900-normal.woff2": "/static/media/titillium-web-latin-900-normal.7c03cd1bc0832fd74fa4.woff2",
+    "static/media/titillium-web-latin-ext-400-normal.woff": "/static/media/titillium-web-latin-ext-400-normal.fb1d060d0edb771cab06.woff",
+    "static/media/titillium-web-latin-ext-300-normal.woff": "/static/media/titillium-web-latin-ext-300-normal.053e7240acbcf3c210bd.woff",
+    "static/media/titillium-web-latin-ext-600-normal.woff": "/static/media/titillium-web-latin-ext-600-normal.4f64b10d6f4ed71ef563.woff",
+    "static/media/titillium-web-latin-ext-700-normal.woff": "/static/media/titillium-web-latin-ext-700-normal.60c676e8ec7953e79729.woff",
+    "static/media/titillium-web-latin-ext-200-normal.woff": "/static/media/titillium-web-latin-ext-200-normal.f41b8d1fd065e5a7efdd.woff",
+    "static/media/titillium-web-latin-ext-900-normal.woff": "/static/media/titillium-web-latin-ext-900-normal.34d8e2f775bc8560efaa.woff",
+    "static/media/titillium-web-latin-ext-300-normal.woff2": "/static/media/titillium-web-latin-ext-300-normal.e20ca55b0e6aa8d749ce.woff2",
+    "static/media/titillium-web-latin-ext-600-normal.woff2": "/static/media/titillium-web-latin-ext-600-normal.1fd103324ee4487095f1.woff2",
+    "static/media/titillium-web-latin-ext-400-normal.woff2": "/static/media/titillium-web-latin-ext-400-normal.fc46e868e0ca6c2fa856.woff2",
+    "static/media/titillium-web-latin-ext-700-normal.woff2": "/static/media/titillium-web-latin-ext-700-normal.9441ccbdd8453a79c7e8.woff2",
+    "static/media/titillium-web-latin-ext-200-normal.woff2": "/static/media/titillium-web-latin-ext-200-normal.2c99bfb545c8d1c960e3.woff2",
+    "static/media/titillium-web-latin-ext-900-normal.woff2": "/static/media/titillium-web-latin-ext-900-normal.370ade3a085c7dc7671b.woff2",
+    "index.html": "/index.html",
+    "main.237f7ec5.css.map": "/static/css/main.237f7ec5.css.map",
+    "main.8eee5466.js.map": "/static/js/main.8eee5466.js.map",
+    "453.59b64609.chunk.js.map": "/static/js/453.59b64609.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.237f7ec5.css",
+    "static/js/main.8eee5466.js"
+  ]
+}
