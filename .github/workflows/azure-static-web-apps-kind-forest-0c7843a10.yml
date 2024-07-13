@@ -1,9 +1,4 @@
-name: Deploy web app to Azure Static Web Apps
-
-env:
-  APP_LOCATION: "/"       # Posizione del codice client
-  API_LOCATION: "api"     # Posizione del codice sorgente API - opzionale
-  OUTPUT_LOCATION: "build" # Posizione dell'output del build del codice client
+name: Azure Static Web Apps CI/CD
 
 on:
   push:
@@ -15,31 +10,46 @@ on:
       - master
 
 jobs:
-  build_and_deploy:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Build and Deploy
+  build_job:
+    if: github.event_name == 'push'
+    runs-on: windows-latest
+    name: Build Job
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: 'giorgio-contini/frontend-tyb'
+          path: 'frontend-tyb'  # Assicura che il percorso corrisponda alla struttura del tuo repository
           submodules: true
-      - name: Build And Deploy
-        uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
+          fetch-depth: 0  # Ensure all history is fetched to enable accurate analysis and build.
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
         with:
-          azure_static_web_apps_api_token: fb31e2a31eda3b9300d6631f255182bf82603ec039c57052ab03d8c63a748abd5-58c3ec95-86da-4237-99ae-8f27c4847015010468037
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: "upload"
-          app_location: ${{ env.APP_LOCATION }}
-          api_location: ${{ env.API_LOCATION }}
-          output_location: ${{ env.OUTPUT_LOCATION }}
+          node-version: '16.x'
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: npm install, build, and test
+        working-directory: frontend-tyb  # Entra nella directory del progetto
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
-  close_pull_request:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+  deploy_job:
     runs-on: ubuntu-latest
-    name: Close Pull Request
+    needs: build_job
     steps:
-      - name: Close Pull Request
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "close"
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_FOREST_0C7843A10 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/"  # Assicura che il percorso sia correttamente configurato
+          output_location: "frontend-tyb/build"  # Assicura che il percorso di output sia corretto
+
+
