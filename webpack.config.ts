@@ -38,11 +38,12 @@ const config: Configuration = {
         },
     },
     
+    
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html', // File HTML di base
+      template: 'public/index.tsx', // File HTML di base
     }),
   ],
 };
