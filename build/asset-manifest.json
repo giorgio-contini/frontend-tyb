@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.237f7ec5.css",
-    "main.js": "/static/js/main.8eee5466.js",
-    "static/js/453.59b64609.chunk.js": "/static/js/453.59b64609.chunk.js",
+    "main.js": "/static/js/main.dbc96c84.js",
+    "static/js/453.a0bef47d.chunk.js": "/static/js/453.a0bef47d.chunk.js",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/titillium-web-latin-300-normal.woff": "/static/media/titillium-web-latin-300-normal.f9bac90d76f78d31c4ba.woff",
@@ -31,11 +31,11 @@
     "static/media/titillium-web-latin-ext-900-normal.woff2": "/static/media/titillium-web-latin-ext-900-normal.370ade3a085c7dc7671b.woff2",
     "index.html": "/index.html",
     "main.237f7ec5.css.map": "/static/css/main.237f7ec5.css.map",
-    "main.8eee5466.js.map": "/static/js/main.8eee5466.js.map",
-    "453.59b64609.chunk.js.map": "/static/js/453.59b64609.chunk.js.map"
+    "main.dbc96c84.js.map": "/static/js/main.dbc96c84.js.map",
+    "453.a0bef47d.chunk.js.map": "/static/js/453.a0bef47d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.237f7ec5.css",
-    "static/js/main.8eee5466.js"
+    "static/js/main.dbc96c84.js"
   ]
 }
