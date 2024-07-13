@@ -8,9 +8,7 @@
       "outputLocation": "build",
       "appBuildCommand": "npm run build",
       "run": "npm start",
-      "appDevserverUrl": "http://localhost:3000",
-      "appName": "frontend-tyb",
-      "resourceGroup": "frontend-tyb-rg"
+      "appDevserverUrl": "http://localhost:3000"
     }
   }
 }
