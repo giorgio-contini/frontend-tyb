@@ -1,0 +1,48 @@
+.HeaderComponent{
+
+  .primary-header {
+    height: 60px;
+    color: white;
+    background-color: rgb(10, 52, 190);
+
+    @media  (max-width: 700px) {
+      .hide-on-sm{
+        display: none !important;
+      }
+    }
+
+  }
+
+  .secondary-header {
+    background: var(--bs-primary);
+    color: white;
+    height: 48px;
+
+    .nav-ul {
+      display: flex;
+      list-style-type: none;
+      /* reset default field in "ul" tag */
+      padding-inline-start: 0;
+      /* overwrite bootstrap's "_reboot.scss" */
+      margin-bottom: 0;
+      height: 48px;
+      align-items: center;
+
+      .a {
+        display: block;
+        font-weight: 700;
+        padding: 13px 24px;
+        color: white;
+        text-decoration: none !important;
+        border-width: 0 !important;
+
+      }
+      .a:hover {
+        cursor: pointer;
+        color: inherit;
+
+      }
+    }
+  }
+
+}

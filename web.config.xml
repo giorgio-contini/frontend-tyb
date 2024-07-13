@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <staticContent>
+      <!-- Configurazione MIME types -->
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+      <remove fileExtension=".woff" />
+      <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+      <remove fileExtension=".woff2" />
+      <mimeMap fileExtension=".woff2" mimeType="font/woff2" />
+      <!-- Aggiungi altre estensioni MIME se necessario -->
+    </staticContent>
+    <handlers>
+      <!-- Gestione dei file statici -->
+      <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="Either" />
+    </handlers>
+    <rewrite>
+      <rules>
+
+        <!-- Riscrive tutte le richieste per puntare alla cartella build -->
+        <rule name="RewriteToBuild" stopProcessing="true">
+          <match url="(.*)" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="build/{R:1}" />
+        </rule>
+        <!-- Regola per gestire il routing delle applicazioni SPA -->
+        <rule name="ReactRoutes" stopProcessing="true">
+          <match url=".*" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="build/index.html" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
