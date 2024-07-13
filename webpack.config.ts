@@ -1,21 +1,31 @@
-const path = require('path');
+import path from 'path';
+import { Configuration } from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-    entry: './src/index.tsx', // Punto di ingresso TypeScript
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
-    resolve: {
-        extensions: ['.ts', '.js'], // Estensioni di file da risolvere
-    },
-    module: {
-        rules: [
-            {
-                test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-        ],
-    },
+const config: Configuration = {
+  entry: './src/index.tsx', // File principale di ingresso TypeScript
+  output: {
+    path: path.resolve(__dirname, 'dist'), // Cartella di output
+    filename: 'bundle.js', // Nome del bundle
+    publicPath: '/', // Percorso pubblico del bundle
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'], // Estensioni dei file da gestire da webpack
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: 'ts-loader', // Carica i file TypeScript utilizzando ts-loader
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/index.html', // File HTML di base
+    }),
+  ],
 };
+
+export default config;
