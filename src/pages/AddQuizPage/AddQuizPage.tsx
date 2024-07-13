@@ -14,29 +14,12 @@ import NotificationComponent from "../../components/NotificationComponent/Notifi
 import InputTextComponent from "../../components/form-fields/InputTextComponent/InputTextComponent";
 import {useFormik} from "formik";
 import * as Yup from "yup";
-
-import {getDocument, GlobalWorkerOptions} from 'pdfjs-dist';
-import 'pdfjs-dist/legacy/build/pdf.worker';
 import FileUploaderComponent from "../../components/FileUploaderComponent/FileUploaderComponent";
 import ImageFolderUploader, {ImageData} from "../../components/ImageFolderUploader/ImageFolderUploader";
 import ToggleButtonComponent from "../../components/ToggleComponent/ToggleButtonComponent";
 
 
-GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/x.y.z/pdf.worker.js'; // Sostituisci x.y.z con la versione corretta
 
-const loadPdf = async (file: Blob) => {
-    const loadingTask = getDocument(URL.createObjectURL(file));
-    const pdf = await loadingTask.promise;
-    let textContent = '';
-
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-        const page = await pdf.getPage(pageNum);
-        const text = await page.getTextContent();
-        textContent += text.items.map((item: any) => item.str).join(' ');
-    }
-
-    console.log(textContent);  // Log del testo estratto per debug
-};
 
 const AddQuizPage = () => {
 
