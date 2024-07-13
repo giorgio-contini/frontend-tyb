@@ -30,6 +30,14 @@ const config: Configuration = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
     },
+    {
+        test: /\.(woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'fonts/[name][ext][query]',
+        },
+    },
+    
     ],
   },
   plugins: [
