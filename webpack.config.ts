@@ -12,8 +12,9 @@ const config: Configuration = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'], // Estensioni dei file da gestire da webpack
     alias: {
-        'pdfjs-dist': path.resolve(__dirname, 'node_modules/pdfjs-dist'),
+        '@fonts': path.resolve(__dirname, 'src/fonts')
     },
+    
   },
   module: {
     rules: [
@@ -30,13 +31,18 @@ const config: Configuration = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
     },
-    {
-        test: /\.(woff|woff2)$/,
-        type: 'asset/resource',
-        generator: {
-            filename: 'fonts/[name][ext][query]',
-        },
-    },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      }
     
     
     ],
