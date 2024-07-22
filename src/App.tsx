@@ -24,17 +24,17 @@ import AddAdminPage from "./pages/AddAdminPage/AddAdminPage";
 export const routes = createBrowserRouter(
     createRoutesFromElements(
         <Route>
-            <Route path="/" Component={RootLayout} >
+            <Route path="/tyb" Component={RootLayout} >
                 <Route path="" Component={WelcomePage}/>
-                <Route path="login" Component={LoginRegistrationPage}/>
-                <Route path="home" element={<ProtectedRoute allowedRoles={["A", "S"]}><HomePage/></ProtectedRoute>}/>
-                <Route path="welcome/:username" Component={WelcomePage}/>
-                <Route path="quiz" element={<ProtectedRoute allowedRoles={["A", "S"]}><QuizPage/></ProtectedRoute>}/>
-                <Route path="statistics" element={<ProtectedRoute allowedRoles={["A", "S"]}><StatisticsPage/></ProtectedRoute>}/>
-                <Route path="add-quiz" element={<ProtectedRoute allowedRoles={["A"]}><AddQuizPage/></ProtectedRoute>}/>
-                <Route path="add-admin" element={<ProtectedRoute allowedRoles={["A"]}><AddAdminPage/></ProtectedRoute>}/>
-                <Route path="profile" element={<ProtectedRoute allowedRoles={["A", "S"]}><ProfilePage/></ProtectedRoute>}/>
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/tyb/login" Component={LoginRegistrationPage}/>
+                <Route path="/tyb/home" element={<ProtectedRoute allowedRoles={["A", "S"]}><HomePage/></ProtectedRoute>}/>
+                <Route path="/tyb/welcome/:username" Component={WelcomePage}/>
+                <Route path="/tyb/quiz" element={<ProtectedRoute allowedRoles={["A", "S"]}><QuizPage/></ProtectedRoute>}/>
+                <Route path="/tyb/statistics" element={<ProtectedRoute allowedRoles={["A", "S"]}><StatisticsPage/></ProtectedRoute>}/>
+                <Route path="/tyb/add-quiz" element={<ProtectedRoute allowedRoles={["A"]}><AddQuizPage/></ProtectedRoute>}/>
+                <Route path="/tyb/add-admin" element={<ProtectedRoute allowedRoles={["A"]}><AddAdminPage/></ProtectedRoute>}/>
+                <Route path="/tyb/profile" element={<ProtectedRoute allowedRoles={["A", "S"]}><ProfilePage/></ProtectedRoute>}/>
+                <Route path="*" element={<Navigate to="/tyb" replace />} />
 
             </Route>
         </Route>

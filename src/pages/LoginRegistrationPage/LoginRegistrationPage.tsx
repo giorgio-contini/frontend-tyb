@@ -68,7 +68,7 @@ const LoginRegistrationPage = () => {
                     sessionStorage.setItem("authToken", response?.data?.token || "");
                     if (response.data.userData) {
                         setUser(response?.data.userData);
-                        navigate("/home", {replace: true})
+                        navigate("/tyb/home", {replace: true})
                     }
                 }
             })

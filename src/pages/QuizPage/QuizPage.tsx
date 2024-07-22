@@ -77,7 +77,7 @@ const QuizPage = () => {
     function saveQuizResult() {
         QuizClient.saveQuizUsingPost(userResults).then(response => {
             showDialogInfo("Test completato", "Verrai reindirizzato alla homepage", () => {
-                navigate("/home", {replace: true})
+                navigate("/tyb/home", {replace: true})
             })
         })
             .catch(error => {
@@ -138,7 +138,7 @@ const QuizPage = () => {
 
     const handleTimeout = () => {
         showDialogInfo("Tempo scaduto", "I dati sono stati inviati correttamente", () => {
-            navigate("/home", {replace: true})
+            navigate("/tyb/home", {replace: true})
         })
     };
 

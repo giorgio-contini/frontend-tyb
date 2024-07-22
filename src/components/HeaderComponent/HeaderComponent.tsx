@@ -33,7 +33,7 @@ const HeaderComponent = ({}: HeaderComponentProps) => {
                     <div>
                         {user ? <>
                             <button className="btn btn-primary" onClick={() => {
-                                navigate("/profile")
+                                navigate("/tyb/profile")
                             }}>
                                 <i className="bi bi-person-circle"></i><span className="ms-2 hide-on-sm">{user.username}</span>
                             </button>
@@ -41,7 +41,7 @@ const HeaderComponent = ({}: HeaderComponentProps) => {
                                 <i className="bi bi-box-arrow-right"></i><span className="ms-2 hide-on-sm">{"Logout"}</span>
                             </button>
                         </> : <button className="btn btn-primary" onClick={() => {
-                            navigate("/login", {replace: true})
+                            navigate("/tyb/login", {replace: true})
                         }}><i className="bi bi-box-arrow-in-left"></i><span
                             className="ms-2 hide-on-sm">{"Login"}</span></button>}
                     </div>

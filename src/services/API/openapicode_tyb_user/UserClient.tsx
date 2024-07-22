@@ -5,7 +5,7 @@ import { UserApi } from "./api";
 
 // Crea un'istanza di Axios con configurazioni di base
 const instance = axios.create({
-    baseURL: 'https://tybbackend.azurewebsites.net/api', // Sostituisci con l'URL della tua API
+    baseURL: 'https://backend-1907.azurewebsites.net/api', // Sostituisci con l'URL della tua API
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',
@@ -29,6 +29,6 @@ instance.interceptors.request.use(
 );
 
 // Crea una nuova istanza del client User utilizzando l'istanza di Axios configurata
-const UserClient = new UserApi(undefined, 'https://tybbackend.azurewebsites.net/api', instance);
+const UserClient = new UserApi(undefined, 'https://backend-1907.azurewebsites.net/api', instance);
 
 export default UserClient;

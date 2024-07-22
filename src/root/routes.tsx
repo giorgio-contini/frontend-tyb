@@ -21,11 +21,11 @@ export const useHeaderRoutes = () => {
     //Metodo che definisce le voci dell'headers in base al ruolo dell'utente loggato
     function genHeaderRoutesArr() {
 
-        const homeRoute = {type: "nav-link", label: "Home", path: "/home"};
+        const homeRoute = {type: "nav-link", label: "Home", path: "/tyb/home"};
         const welcomeRoute = {type: "nav-link", label: "Welcome", path: "/"};
-        const statisticheRoute = {type: "nav-link", label: "Statistiche", path: "/statistics"};
-        const addQuiz = {type: "nav-link", label: "Aggiungi Quiz", path: "/add-quiz"};
-        const addAdmin = {type: "nav-link", label: "Nomina Admin", path: "/add-admin"};
+        const statisticheRoute = {type: "nav-link", label: "Statistiche", path: "/tyb/statistics"};
+        const addQuiz = {type: "nav-link", label: "Aggiungi Quiz", path: "/tyb/add-quiz"};
+        const addAdmin = {type: "nav-link", label: "Nomina Admin", path: "/tyb/add-admin"};
 
         const headerRoutesArrStudents: headerRoute[] = [homeRoute, statisticheRoute];
         //const headerRoutesArrProfessors: headerRoute[] = [homeRoute, statisticheRoute, addQuiz];

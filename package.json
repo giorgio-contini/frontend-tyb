@@ -2,6 +2,7 @@
   "name": "frontend_tyb",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/tyb",
   "dependencies": {
     "@fontsource/titillium-web": "^5.0.5",
     "@popperjs/core": "^2.11.8",
@@ -16,7 +17,7 @@
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10.5",
     "bootstrap-italia": "^2.1.1",
-    "chart.js": "^4.4.2",
+    "chart.js": "^4.4.3",
     "crypto-js": "^4.2.0",
     "file-saver": "^2.0.5",
     "formik": "^2.4.4",

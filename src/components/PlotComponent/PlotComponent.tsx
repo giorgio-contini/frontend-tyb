@@ -7,9 +7,11 @@ import {
     LinearScale,
     LineElement,
     PointElement,
-    Tooltip
+    Tooltip,
+    Title
+
 } from 'chart.js';
-import {Chart} from 'react-chartjs-2';
+import {Chart, Line} from 'react-chartjs-2';
 
 
 
@@ -22,6 +24,17 @@ ChartJS.register(
     Legend,
     Tooltip
 );
+
+
+// Registrare i componenti richiesti
+ChartJS.register(
+    LineElement,
+    PointElement,
+    LinearScale,
+    Title,
+    CategoryScale
+);
+
 
 export const options= {
     scales: {
@@ -37,7 +50,7 @@ export const options= {
 type PlotProps = {
     data: {label: string, value: number, labelAX:string}[];
     label: string;
-    plotType: "bar" | "line" | "pie";
+    plotType: "line";
 }
 
 export function generateRandomRGB(): string {
@@ -97,13 +110,7 @@ const PlotComponent = ({data, plotType}: PlotProps) => {
     };
 
     return (
-        <Chart
-            ref={chartRef}
-            type={plotType}
-            onClick={onClick}
-            options={options}
-            data={plotData}
-        />
+        <Line  data={plotData} options={options} onClick={onClick}/>
     );
 }
 

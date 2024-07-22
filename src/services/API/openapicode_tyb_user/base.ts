@@ -19,7 +19,7 @@ import type { Configuration } from './configuration';
 import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 
-export const BASE_PATH = "https://tybbackend.azurewebsites.net/api".replace(/\/+$/, "");
+export const BASE_PATH = "https://backend-1907.azurewebsites.net/api".replace(/\/+$/, "");
 
 /**
  *

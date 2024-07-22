@@ -37,7 +37,7 @@ const WelcomePage: React.FC = () => {
                 </div>
 
                 <div className="navigation-link">
-                    <h3>Vuoi iniziare subito? Accedi o registrati <span className="link" onClick={() => handleNavigation("/login")}>qui</span>.</h3>
+                    <h3>Vuoi iniziare subito? Accedi o registrati <span className="link" onClick={() => handleNavigation("/tyb/login")}>qui</span>.</h3>
                 </div>
             </main>
         </div>

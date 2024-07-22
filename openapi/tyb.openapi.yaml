@@ -4,7 +4,7 @@ info:
   description: TYB reference for developers
   version: 1.0.0
 servers:
-  - url: https://tybbackend.azurewebsites.net/api/
+  - url: https://backend-1907.azurewebsites.net/api/
     description: Inferred Url
 tags:
   - name: TrainYourBrainInterface

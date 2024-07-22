@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-    baseURL: 'https://tybbackend.azurewebsites.net/api', // Sostituisci con l'URL della tua API
+    baseURL: 'https://backend-1907.azurewebsites.net/api', // Sostituisci con l'URL della tua API
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',
@@ -28,6 +28,6 @@ instance.interceptors.request.use(
 );
 
 
-const QuizClient = new QuizApi(undefined, 'https://tybbackend.azurewebsites.net/api', instance);
+const QuizClient = new QuizApi(undefined, 'https://backend-1907.azurewebsites.net/api', instance);
 
 export default QuizClient;

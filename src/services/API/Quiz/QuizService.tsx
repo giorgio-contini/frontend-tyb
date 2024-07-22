@@ -4,11 +4,11 @@ import axios from "axios";
 class QuizService {
 
     static createQuiz = (payload: any) => {
-        return axios.post(`https://tybbackend.azurewebsites.net/api/quiz/create`, payload);
+        return axios.post(`https://backend-1907.azurewebsites.net/api/quiz/create`, payload);
     }
 
     static getQuestionsByTopic = async (topic: string) => {
-        return axios.get(`https://tybbackend.azurewebsites.net/api/quiz/${topic}`);
+        return axios.get(`https://backend-1907.azurewebsites.net/api/quiz/${topic}`);
     }
 
 }

@@ -5,18 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a33af42-97e9-45b7-a2ae-47f1bd540cc3" name="Changes" comment="fix">
-      <change beforePath="$PROJECT_DIR$/.idea/TyB_frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend-tyb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2024_12_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2024_12_38__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2024_17_13_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_07_2024_17_13__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.ee1b8db4.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/main.ee1b8db4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/tyb.openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/tyb.openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderComponent/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComponent/HeaderComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlotComponent/PlotComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlotComponent/PlotComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginRegistrationPage/LoginRegistrationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginRegistrationPage/LoginRegistrationPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QuizPage/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QuizPage/QuizPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WelcomePage/WelcomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/root/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/root/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/Quiz/QuizService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/API/Quiz/QuizService.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/LoginClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/LoginClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/QuizClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/QuizClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/UserClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/UserClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/API/openapicode_tyb_user/base.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -27,7 +56,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/giorgio-contini/frontend-tyb.git&quot;,
-    &quot;accountId&quot;: &quot;ea384692-7250-4e1e-8d79-06d9bfcb589c&quot;
+    &quot;accountId&quot;: &quot;62718d31-af44-4dcb-bc32-50834152c33f&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -56,7 +85,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\gcontini2\\IntellijPrj\\Poliba\\frontend-tyb\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -108,6 +139,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -130,6 +176,11 @@
       <workItem from="1720883714673" duration="1574000" />
       <workItem from="1720886919305" duration="631000" />
       <workItem from="1720887759594" duration="441000" />
+      <workItem from="1721117184640" duration="451000" />
+      <workItem from="1721199920450" duration="453000" />
+      <workItem from="1721404743552" duration="2040000" />
+      <workItem from="1721412795421" duration="2694000" />
+      <workItem from="1721633395985" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="change to win and separate step build-deploy">
       <option name="closed" value="true" />
@@ -370,6 +421,7 @@
     <MESSAGE value="chiave api schiantata" />
     <MESSAGE value="wind again" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Revert &quot;fix&quot;&#10;&#10;This reverts commit d17cb70c" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;fix&quot;&#10;&#10;This reverts commit d17cb70c" />
   </component>
 </project>

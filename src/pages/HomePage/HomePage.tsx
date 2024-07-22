@@ -65,7 +65,7 @@ const HomePage: FC<HomeComponentProps> = () => {
                 button1: {
                     label: "Procedi",
                     onClick: () => {
-                        navigate("/quiz", {
+                        navigate("/tyb/quiz", {
                             replace: true,
                             state: {
                                 topic: el.topic,
