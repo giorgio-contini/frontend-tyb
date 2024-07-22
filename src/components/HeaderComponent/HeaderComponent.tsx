@@ -21,7 +21,7 @@ const HeaderComponent = ({}: HeaderComponentProps) => {
         return () => {
             setUser(undefined);
             sessionStorage.clear();
-            navigate("/", {replace: true})
+            navigate("/tyb", {replace: true})
         };
     }
 

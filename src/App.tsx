@@ -28,7 +28,7 @@ export const routes = createBrowserRouter(
                 <Route path="" Component={WelcomePage}/>
                 <Route path="/tyb/login" Component={LoginRegistrationPage}/>
                 <Route path="/tyb/home" element={<ProtectedRoute allowedRoles={["A", "S"]}><HomePage/></ProtectedRoute>}/>
-                <Route path="/tyb/welcome/:username" Component={WelcomePage}/>
+                <Route path="/tyb/welcome" Component={WelcomePage}/>
                 <Route path="/tyb/quiz" element={<ProtectedRoute allowedRoles={["A", "S"]}><QuizPage/></ProtectedRoute>}/>
                 <Route path="/tyb/statistics" element={<ProtectedRoute allowedRoles={["A", "S"]}><StatisticsPage/></ProtectedRoute>}/>
                 <Route path="/tyb/add-quiz" element={<ProtectedRoute allowedRoles={["A"]}><AddQuizPage/></ProtectedRoute>}/>

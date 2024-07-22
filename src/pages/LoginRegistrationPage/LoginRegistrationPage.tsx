@@ -27,6 +27,7 @@ const LoginRegistrationPage = () => {
     //metodo di gestione dei tab (log/reg)
     const handleTabChanges = () => {
         resetFormikForm();
+        setIsAdmin(false)
         setLogin(!isLogin);
     }
 
@@ -88,7 +89,8 @@ const LoginRegistrationPage = () => {
             'email-required-if-admin',
             'Campo obbligatorio',
             function (value) {
-                if (isAdmin) {
+                debugger
+                if (isAdmin ) {
                     return !!value;
                 }
                 return true;

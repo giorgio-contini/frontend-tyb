@@ -32,7 +32,7 @@ const ProfilePage = () => {
                 showDialogSuccess("", response.data.descrizione || "", () => {
                     sessionStorage.clear();
                     setUser(undefined)
-                    navigate("/", {replace: true});
+                    navigate("/tyb", {replace: true});
                 });
             } else {
                 showDialogFailed(response.data.descrizione);

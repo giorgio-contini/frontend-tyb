@@ -22,7 +22,7 @@ export const useHeaderRoutes = () => {
     function genHeaderRoutesArr() {
 
         const homeRoute = {type: "nav-link", label: "Home", path: "/tyb/home"};
-        const welcomeRoute = {type: "nav-link", label: "Welcome", path: "/"};
+        const welcomeRoute = {type: "nav-link", label: "Welcome", path: "/tyb"};
         const statisticheRoute = {type: "nav-link", label: "Statistiche", path: "/tyb/statistics"};
         const addQuiz = {type: "nav-link", label: "Aggiungi Quiz", path: "/tyb/add-quiz"};
         const addAdmin = {type: "nav-link", label: "Nomina Admin", path: "/tyb/add-admin"};
